@@ -1,0 +1,12 @@
+body{
+  background-color: lightblue;
+  flex-flow: column-reverse;
+
+}
+
+table {
+  border: 12px;
+  padding: 30px;
+  align-items: stretch;
+
+}
