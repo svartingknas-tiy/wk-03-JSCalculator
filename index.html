@@ -2,70 +2,69 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>calculator</title>
+    <title>Calculator</title>
    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="./CSS/master.css"> 
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="./CSS/master.css">
   </head>
   <body>
-    <FORM name="Calc">
- <table>  <!--OUTER BORDER OF CALCULATOR, PANELS-->
-  <tr>   <!--TOP PANEL------>
-    <td colspan="2">My JS Calculator!<br>
-      <input type="text" maxlength="50" size="40" name="Display">
-    </td>
-  </tr>  <!--END TOP PANEL--->
-  <tr>
-    <td> <!--LEFT PANEL------>
-      <table>
-        <div class="">
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;1&nbsp;</button>
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;2&nbsp;</button>
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;3&nbsp;</button>
-        </div>
-        <div class="">
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;4&nbsp;</button>
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;5&nbsp;</button>
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;6&nbsp;</button>
-        </div>
-        <div class="">
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;7&nbsp;</button>
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;8&nbsp;</button>
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;9&nbsp;</button>
-        </div>
-        <div class="">
-          <button type="button" class="btn btn-primary btn-lg">+/-</button>
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;0&nbsp;</button>
-          <button type="button" class="btn btn-primary btn-lg">&nbsp;.&nbsp;</button>
-        </div>
 
-       </tr>
-      </table>
-    </td><!--END LEFT PANEL-->
-    <td> <!--RIGHT PANEL----->
-      <table>
-        <div class="">
-          <button type="button" class="btn btn-primary btn-lg">C</button>
-          <button type="button" class="btn btn-primary btn-lg">AC</button>
-        </div>
-        <div class="">
-          <button type="button" class="btn btn-primary btn-lg">+</button>
-          <button type="button" class="btn btn-primary btn-lg">-</button>
-        </div>
-        <div class="">
-          <button type="button" class="btn btn-primary btn-lg">x</button>
-          <button type="button" class="btn btn-primary btn-lg">/</button>
-        </div>
-        <div class="">
-          <button type="button" class="btn btn-primary btn-lg">=</button>
-          <button type="button" class="btn btn-primary btn-lg">EXP</button>
-        </table>
-        </div>
+    <hr><div align="center">
+    <FORM name="Calculator">
+    <table width="45%" border="4" bgcolor="#9999CC">      <!--OUTER MARGIN OF CALCULATOR-->
+    <td colspan="2" align="center">
 
-    </td>
-  </tr>
-</table>
-</FORM>
+    <b><font face="Verdana, Arial, Helvetica" color="#000080" size="3">
+    A Simple JavaScript Calculator<br></font>
+    <font face="Courier" size="5">
+    <input type="text" maxlength="40" size="25" name="Display" onChange="FixCurrent()">
+    </font></b>
+
+
+    <td width="65%" align="center">                   <!--left panel------>
+
+    <div class="">
+      <input type="button" name="seven" value="   7    " OnClick="buttonNumber('7')">
+      <input type="button" name="eight" value="   8    " OnClick="buttonNumber('8')">
+      <input type="button" name="nine" value="   9    " OnClick="buttonNumber('9')">
+    </div>
+    <div class="">
+      <input type="button" name="four" value="   4    " OnClick="buttonNumber('4')">
+      <input type="button" name="five" value="   5    " OnClick="buttonNumber('5')">
+      <input type="button" name="six" value="   6    " OnClick="buttonNumber('6')">
+    </div>
+      <input type="button" name="one" value="   1    " OnClick="buttonNumber('1')">
+      <input type="button" name="two" value="   2    " OnClick="buttonNumber('2')">
+      <input type="button" name="three" value="   3    " OnClick="buttonNumber('3')">
+    <div class="">
+      <input type="button" name="plusmin" value="  +/-  " OnClick="PlusMinus()">
+      <input type="button" name="one" value="   0    " OnClick="buttonNumber('0')">
+      <input type="button" name="two" value="    .    " OnClick="Dot()">
+    </div>
+
+
+                                       <!--end left panel-->
+    <td width="35%" align="center">                     <!--right panel----->
+    <div class="">
+      <input type="button" name="clear" value="    C     " OnClick="Clear()">
+      <input type="button" name="AC" value="   AC    " OnClick="AllClear()">
+    </div>
+    <div class="">
+      <input type="button" name="mul" value="     *     " OnClick="Operate('*')">
+      <input type="button" name="div" value="     /      " OnClick="Operate('/')">
+      <div class="">
+    </div>
+    <div class="">
+      <input type="button" name="add" value="    +     " OnClick="Operate('+')">
+      <input type="button" name="sub" value="     -      " OnClick="Operate('-')">
+    </div>
+    </table>
+
+
+                                       <!--end right panel-->
+    </table>                          <!--END OUTER MARGIN CALC------->
+    </FORM></div>
+
     <script src="./Javascript/script.js"></script>
   </body>
 </html>

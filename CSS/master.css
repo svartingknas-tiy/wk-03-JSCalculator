@@ -1,6 +1,5 @@
 body{
   background-color: lightblue;
-  flex-flow: column-reverse;
 
 }
 
@@ -9,4 +8,8 @@ table {
   padding: 30px;
   align-items: stretch;
 
+}
+
+.divcenter{
+  align: center;
 }
