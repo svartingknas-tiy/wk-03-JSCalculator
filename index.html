@@ -3,68 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Calculator</title>
-   <!-- Latest compiled and minified CSS -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-<link rel="stylesheet" href="./CSS/master.css">
   </head>
   <body>
-
-    <hr><div align="center">
-    <FORM name="Calculator">
-    <table width="45%" border="4" bgcolor="#9999CC">      <!--OUTER MARGIN OF CALCULATOR-->
-    <td colspan="2" align="center">
-
-    <b><font face="Verdana, Arial, Helvetica" color="#000080" size="3">
-    A Simple JavaScript Calculator<br></font>
-    <font face="Courier" size="5">
-    <input type="text" maxlength="40" size="25" name="Display" onChange="FixCurrent()">
-    </font></b>
-
-
-    <td width="65%" align="center">                   <!--left panel------>
-
-    <div class="">
-      <input type="button" name="seven" value="   7    " OnClick="buttonNumber('7')">
-      <input type="button" name="eight" value="   8    " OnClick="buttonNumber('8')">
-      <input type="button" name="nine" value="   9    " OnClick="buttonNumber('9')">
-    </div>
-    <div class="">
-      <input type="button" name="four" value="   4    " OnClick="buttonNumber('4')">
-      <input type="button" name="five" value="   5    " OnClick="buttonNumber('5')">
-      <input type="button" name="six" value="   6    " OnClick="buttonNumber('6')">
-    </div>
-      <input type="button" name="one" value="   1    " OnClick="buttonNumber('1')">
-      <input type="button" name="two" value="   2    " OnClick="buttonNumber('2')">
-      <input type="button" name="three" value="   3    " OnClick="buttonNumber('3')">
-    <div class="">
-      <input type="button" name="plusmin" value="  +/-  " OnClick="PlusMinus()">
-      <input type="button" name="one" value="   0    " OnClick="buttonNumber('0')">
-      <input type="button" name="two" value="    .    " OnClick="Dot()">
-    </div>
-
-
-                                       <!--end left panel-->
-    <td width="35%" align="center">                     <!--right panel----->
-    <div class="">
-      <input type="button" name="clear" value="    C     " OnClick="Clear()">
-      <input type="button" name="AC" value="   AC    " OnClick="AllClear()">
-    </div>
-    <div class="">
-      <input type="button" name="mul" value="     *     " OnClick="Operate('*')">
-      <input type="button" name="div" value="     /      " OnClick="Operate('/')">
-      <div class="">
-    </div>
-    <div class="">
-      <input type="button" name="add" value="    +     " OnClick="Operate('+')">
-      <input type="button" name="sub" value="     -      " OnClick="Operate('-')">
-    </div>
-    </table>
-
-
-                                       <!--end right panel-->
-    </table>                          <!--END OUTER MARGIN CALC------->
-    </FORM></div>
-
-    <script src="./Javascript/script.js"></script>
+    <form>
+      <table border="4">
+        <tr>
+          <td colspan="2">JS Calculator<br>
+            <input type="text" maxlength="40" size="30" id="Display">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table id="numbers">
+              <tr>
+               <td><input type="button" value="7" name="seven" onclick="AddDigit(7)"></td>
+               <td><input type="button" value="8" name="eight" onclick="AddDigit(8)"></td>
+               <td><input type="button" value="9" name="nine" onclick="AddDigit(9)"></td>
+              </tr>
+              <tr>
+               <td><input type="button" value="4" name="four" onclick="AddDigit(4)"></td>
+               <td><input type="button" value="5" name="five" onclick="AddDigit(5)"></td>
+               <td><input type="button" value="6" name="six" onclick="AddDigit(6)"></td>
+              </tr>
+              <tr>
+               <td><input type="button" value="1" name="one" onclick="AddDigit(1)"></td>
+               <td><input type="button" value="2" name="two" onclick="AddDigit(2)"></td>
+               <td><input type="button" value="3" name="three" onclick="AddDigit(3)"></td>
+              </tr>
+              <tr>
+                <td><input type="button" value="0" name="zero" onclick="AddDigit(0)"></td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table id="operators">
+              <tr>
+                <td><input type="button" value="+" onclick="AddDigit('+')"></td>
+                <td><input type="button" value="-" onclick="AddDigit('-')"></td>
+              </tr>
+              <tr>
+                <td><input type="button" value="*" onclick="AddDigit('*')"></td>
+                <td><input type="button" value="/" onclick="AddDigit('/')"></td>
+              </tr>
+              <tr>
+                <td><input type="button" value="C" onclick="reset();"></td>
+                <td><input type="button" value="=" onclick="result();"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script src="./javascript/script.js" charset="utf-8"></script>
   </body>
 </html>

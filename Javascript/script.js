@@ -1,22 +1,13 @@
-"use strict"
+alert("welcome to calculator");
 
-
-function add(a, b) {
-  return a + b;
+function AddDigit(value) {
+  document.getElementById("Display").value += value;
 }
 
-function subtract (a, b) {
-  return a - b;
+function result(){
+  document.getElementById("Display").value = eval(document.getElementById("Display").value);
 }
 
-function mult(a, b) {
-  return a * b;
-}
-
-function divide(a, b) {
-  return a / b;
-}
-
-function remainder(a, b) {
-  return a % b;
+function reset(){
+  document.getElementById("Display").value = " ";
 }
