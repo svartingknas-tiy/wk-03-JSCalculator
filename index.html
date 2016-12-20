@@ -5,11 +5,11 @@
     <title>Calculator</title>
   </head>
   <body>
-    <form>
+    <form name="Calculator">
       <table border="4">
         <tr>
           <td colspan="2">JS Calculator<br>
-            <input type="text" maxlength="40" size="30" id="Display">
+            <input type="text" maxlength="40" size="30" id="display">
           </td>
         </tr>
         <tr>
@@ -31,23 +31,25 @@
                <td><input type="button" value="3" name="three" onclick="AddDigit(3)"></td>
               </tr>
               <tr>
+                <td><input type="button" value="C" onclick="reset();"></td>
                 <td><input type="button" value="0" name="zero" onclick="AddDigit(0)"></td>
+                <td><input type="button" value="." onclick="dot();"></td>
               </tr>
             </table>
           </td>
           <td>
-            <table id="operators">
+            <table>
               <tr>
-                <td><input type="button" value="+" onclick="AddDigit('+')"></td>
-                <td><input type="button" value="-" onclick="AddDigit('-')"></td>
+                <td><input type="button" value="+" onclick="plus()"></td>
+                <td><input type="button" value="-" onclick="sub()"></td>
               </tr>
               <tr>
-                <td><input type="button" value="*" onclick="AddDigit('*')"></td>
-                <td><input type="button" value="/" onclick="AddDigit('/')"></td>
+                <td><input type="button" value="*" onclick="mult()"></td>
+                <td><input type="button" value="/" onclick="div()"></td>
               </tr>
               <tr>
-                <td><input type="button" value="C" onclick="reset();"></td>
-                <td><input type="button" value="=" onclick="result();"></td>
+                <td><input type="button" value="%" onclick="mod()"></td>
+                <td><input type="button" value="=" onclick="calculate()"></td>
               </tr>
             </table>
           </td>
